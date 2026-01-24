@@ -10,7 +10,7 @@ icon_path = Path(__file__).parent / "images" / "page_logo.jpeg"
 icon = Image.open(icon_path)
 
 st.set_page_config(
-                    page_title="E-Portfolio - University of Arizona",
+                    page_title="E-Portfolio - Sundar Ram Subramanian",
                     page_icon=icon,
                     layout="wide"
                 )
