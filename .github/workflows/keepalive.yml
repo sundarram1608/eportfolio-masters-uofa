@@ -1,0 +1,14 @@
+name: Keep UofA ePortfolio alive #name of the workflow
+
+on: #trigger
+  schedule:
+    - cron: "*/30 * * * *"   # every 30 minutes
+  workflow_dispatch:
+
+jobs:
+  keepalive: #jobid for GitHub
+    runs-on: ubuntu-latest
+    steps:
+      - name: scheduled ping of UofA ePortfolio app #job Label for logs
+        run: |
+          curl -I -L --max-time 20 "https://eportfolio-sundar-ram-subramanian-masters-infosci-uofa.streamlit.app/" || true
