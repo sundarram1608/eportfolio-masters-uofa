@@ -357,16 +357,19 @@ st.markdown(
                                     margin-right: 2px;
                                     }
 /* Give the page room for your fixed header (important on mobile too) */
-            .block-container {
-                                padding-top: 110px;   /* was 0rem - causes overlap/collapse feeling */
-                                padding-bottom: 2.5rem;
-                              }
+                              
+  /* reserve a bit less space for smaller header */
+  .block-container{
+    padding-top: 80px;   /* must match mobile header height */
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
             
-            /* Make header less “rigid” */
-            .fixed-header-wrap {
-                                position: sticky;   /* better than fixed on mobile */
-                                top: 0;
-                              }
+              /* tighter header padding */
+            .fixed-header-wrap{
+                padding: 8px 12px;
+              }
+
             
             /* Responsive overrides */
             @media (max-width: 768px) {
@@ -379,11 +382,11 @@ st.markdown(
             }
           
             /* Header becomes compact */
-            .fixed-header-grid {
-              grid-template-columns: 56px 1fr 0px; /* no right spacer */
-              width: 100%;
-              gap: 10px;
-            }
+ .fixed-header-grid{
+    width: 100%;
+    grid-template-columns: auto 1fr; /* logo + title */
+    gap: 10px;
+  }
           
             .fixed-header-grid h2 {
               font-size: 1.0em;
