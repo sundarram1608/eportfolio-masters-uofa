@@ -357,13 +357,6 @@ st.markdown(
                                     margin-right: 2px;
                                     }
 /* Give the page room for your fixed header (important on mobile too) */
-                              
-  /* reserve a bit less space for smaller header */
-  .block-container{
-    padding-top: 80px;   /* must match mobile header height */
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
             
               /* tighter header padding */
             .fixed-header-wrap{
@@ -376,8 +369,8 @@ st.markdown(
             
             /* Make Streamlit content not hug the edges */
             .block-container {
-              padding-left: 0.75rem;
-              padding-right: 0.75rem;
+              padding-left: 1rem;
+              padding-right: 1rem;
               padding-top: 90px;
             }
           
