@@ -356,6 +356,74 @@ st.markdown(
                                     font-size: 0.9em;
                                     margin-right: 2px;
                                     }
+/* Give the page room for your fixed header (important on mobile too) */
+            .block-container {
+                                padding-top: 110px;   /* was 0rem - causes overlap/collapse feeling */
+                                padding-bottom: 2.5rem;
+                              }
+            
+            /* Make header less “rigid” */
+            .fixed-header-wrap {
+                                position: sticky;   /* better than fixed on mobile */
+                                top: 0;
+                              }
+            
+            /* Responsive overrides */
+            @media (max-width: 768px) {
+            
+            /* Make Streamlit content not hug the edges */
+            .block-container {
+              padding-left: 0.75rem;
+              padding-right: 0.75rem;
+              padding-top: 90px;
+            }
+          
+            /* Header becomes compact */
+            .fixed-header-grid {
+              grid-template-columns: 56px 1fr 0px; /* no right spacer */
+              width: 100%;
+              gap: 10px;
+            }
+          
+            .fixed-header-grid h2 {
+              font-size: 1.0em;
+              line-height: 1.2;
+              margin: 0;
+            }
+          
+            .uni-logo {
+              max-height: 40px;
+              margin-left: 0;
+            }
+          
+            /* Cover + avatar scale down */
+            .cover { height: 140px; }
+            .cover img { height: 140px; }
+          
+            .avatar {
+              width: 110px;
+              height: 110px;
+              top: -55px;
+              left: 18px;
+              border-width: 4px;
+            }
+          
+            .info {
+              padding: 66px 16px 16px 16px; /* less padding, fits mobile */
+            }
+          
+            .name {
+              font-size: 26px !important;
+            }
+          
+            /* Pills wrap more nicely */
+            span[style*="border-radius:999px"] {
+              font-size: 0.78rem !important;
+              padding: 5px 8px !important;
+            }
+          }
+
+                                    
             </style>
             """,
                 unsafe_allow_html=True,
