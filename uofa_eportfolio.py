@@ -72,58 +72,14 @@ def to_data_uri(path: Path) -> str:
 def img_uri(filename: str) -> str:
     return to_data_uri(ASSETS / filename)
 
-
-def show_transcript_pdf(pdf_path: Path, max_pages: int = 6):
-    """
-    Reliable preview: render PDF pages as images using pypdfium2.
-    This avoids browser issues with iframes/data-URLs.
-    """
-    if not pdf_path.exists():
-        st.error(f"Transcript PDF not found: {pdf_path}")
-        return
-
-    try:
-        import pypdfium2 as pdfium
-    except Exception:
-        st.error("Missing dependency for PDF preview: pypdfium2")
-        st.code("pip install pypdfium2")
-        return
-
-    pdf = pdfium.PdfDocument(str(pdf_path))
-    n_pages = len(pdf)
-    # st.info(f"Showing first {min(max_pages, n_pages)} page(s) of the transcript. Download below for full PDF.")
-
-    for i in range(min(max_pages, n_pages)):
-        page = pdf[i]
-        pil_image = page.render(scale=2).to_pil()  # scale=2 is readable
-        st.image(pil_image, caption=f"Page {i+1}", use_container_width=True)
-
-
 # ---- NEW TAB VIEWER for viewing transcripts and degree ----
 doc = st.query_params.get("doc", None)
 
 if isinstance(doc, list):
     doc = doc[0] if doc else None
-
-if doc == "transcript":
-    # st.title("Unofficial Transcript")
-
-    pdf_path = FILES_DIR / "unofficial_transcript.pdf"
-
-    # Always allow download
-    if pdf_path.exists():
-        st.download_button(
-            "Download PDF",
-            data=pdf_path.read_bytes(),
-            file_name=pdf_path.name,
-            mime="application/pdf",
-        )
     # Preview (renders pages)
     show_transcript_pdf(pdf_path, max_pages=6)
-
-
-    st.stop()
-
+  
 if doc == "degree":
     img_path = FILES_DIR / "degree.jpeg"  # change to .jpeg/.png if needed
     # st.title("Degree")
@@ -470,7 +426,14 @@ st.markdown(
                 <div><b>Status:</b> {PROFILE["status"]}</div>
                 </div>
                 <div class="links" style="margin-top:12px;">
-                <div><a href="?doc=transcript" target="_blank" rel="noopener noreferrer" class="external-link">View Transcript</a></div>
+                <div>
+                <a href="https://drive.google.com/file/d/1x5j1CF_zySy9N50M6HOi6-wGbaolgbfq/view?usp=sharing"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="external-link">
+                   View Transcript
+                </a>
+                </div>
                 <br>
                 <div><a href="mailto:{PROFILE["email"]}">Email</a></div>
                 </div>
