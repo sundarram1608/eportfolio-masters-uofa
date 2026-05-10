@@ -110,6 +110,16 @@ PROFILE = {
 
 COURSES = [
             {
+                "semester": "Spring 2026",
+                "course_name": "INFO 698: Capstone Research",
+                "grade": "A",
+                "skills": ["Directed Research", "Fine Tuning", "Transfer Learning", "Post Training", "LoRA", "Audio Tokenization", "Residual Vector Quantizaation", "Transformers", "User Perceptual Evaluation", "Statistical Analysis", "Multimodal Language Models", "Foundational Music Models", "Music Generation", ],
+                "project":{
+                                "title": "Research study on Fine Tuning Foundational Music models for Domain Adaptation",
+                                "description": "Carnatic music, one of South India's two classical traditions, is systematically underrepresented in the Western-dominated corpora that pretrain foundation music models. I addressed this by LoRA, fine-tuning Meta's MusicGen-Small (~0.5% trainable parameters) on ~96 hours of licensed Carnatic audio, running the entire pipeline on Apple mps: data curation, EnCodec RVQ tokenization, post training, and a hybrid evaluation framework spanning quantitaive (perplexity, acoustic boundary-continuation distances), and a qualitative (deployed Streamlit listening study) evaluations. Across 192 forced-choice trials, listeners preferred the fine-tuned continuations on musicality, Carnatic authenticity, and continuity at statistically significant levels (one-sided binomial, Holm-corrected p < 0.05). Therefore, it is evident that culturally-specific domain adaptation of foundation models is achievable with modest compute and rigorous evaluation."
+                            }
+            },  
+            {
                 "semester": "Fall 2025",
                 "course_name": "INFO 555: Applied NLP",
                 "grade": "A",
