@@ -414,7 +414,7 @@ profile_uri = img_uri("profile_picture.jpeg")
 cover_html = f'<img src="{cover_uri}" />' if cover_uri else ""
 avatar_html = f'<img class="avatar" src="{profile_uri}" />' if profile_uri else ""
 
-transcript_uri = img_uri("unofficial_transcript.pdf")
+transcript_uri = img_uri("Unofficial_Transcript_Sundar Ram Subramanian.pdf")
 degree_uri = img_uri("degree.jpeg")  # or degree.jpeg if that's your file
 
 st.markdown(
