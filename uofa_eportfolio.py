@@ -102,7 +102,7 @@ PROFILE = {
             "program": "Masters in Information Science (Machine Learning Specialization)",
             "college": "College of Information Science",
             "year": "Batch of 2024 - 2026",
-            "status": "Pursuing",
+            "status": "Graduated with Masters",
             "email": "sundarram1997@arizona.edu",
             # "linkedin": "https://www.linkedin.com/in/sundar-ram-subramanian",
             # "github": "https://github.com/your-handle",
@@ -444,7 +444,7 @@ st.markdown(
                 </div>
                 <div class="links" style="margin-top:12px;">
                 <div>
-                <a href="https://drive.google.com/file/d/1x5j1CF_zySy9N50M6HOi6-wGbaolgbfq/view?usp=sharing"
+                <a href="https://drive.google.com/file/d/1D3clqQMUidSRerpDAXEg8-RV4edXqZTf/view?usp=share_link"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="external-link">
