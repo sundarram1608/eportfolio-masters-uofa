@@ -99,14 +99,24 @@ PROFILE = {
             "capsname": "SUNDAR RAM SUBRAMANIAN",
             "name": "Sundar Ram Subramanian",
             "portfolio_title": "ACADEMIC E-PORTFOLIO",
-            "program": "Masters in Information Science (Machine Learning Specialization)",
-            "college": "College of Information Science",
-            "year": "Batch of 2024 - 2026",
-            "status": "Graduated with Masters",
-            "email": "sundarram1997@arizona.edu",
+            # "program": "Masters in Information Science (Machine Learning Specialization)",
+            "program": "Graduate Degree Seeking",      
+            "college": "The University of Arizona | Graduate",
+            # "college": "College of Information Science",
+            "degree": "MS",
+            "major": "Information Science",
+            "emphasis": "Machine-Learning",
+      
+            # "year": "Batch of 2024 - 2026",
+            "graduation term": "Spring 2026",
+            # "status": "Graduated with Masters",
+            "status": "Degree has been awarded",
+            "email": "sundarram1997@gmail.com",
             # "linkedin": "https://www.linkedin.com/in/sundar-ram-subramanian",
             # "github": "https://github.com/your-handle",
         }
+
+
 
 COURSES = [
             {
@@ -405,6 +415,7 @@ f"""<div class="fixed-header-wrap">
 unsafe_allow_html=True
 )
 
+
 # -----------------------------
 # LinkedIn-style profile + cover layout
 # -----------------------------
@@ -416,13 +427,36 @@ avatar_html = f'<img class="avatar" src="{profile_uri}" />' if profile_uri else 
 
 # transcript_uri = img_uri("Unofficial_Transcript_Sundar Ram Subramanian.pdf")
 st.markdown(
-    '<a href="https://drive.google.com/file/d/1D3clqQMUidSRerpDAXEg8-RV4edXqZTf/view?usp=share_link" '
+    '<a href="https://drive.google.com/file/d/1kd7SuPWV48KhwAXANAfEp5l-ykqri5zu/view?usp=share_link" '
     'target="_blank" '
     'rel="noopener noreferrer">Open file</a>',
     unsafe_allow_html=True
 )
 
 degree_uri = img_uri("degree.jpeg")  # or degree.jpeg if that's your file
+
+
+PROFILE = {
+            "capsname": "SUNDAR RAM SUBRAMANIAN",
+            "name": "Sundar Ram Subramanian",
+            "portfolio_title": "ACADEMIC E-PORTFOLIO",
+            # "program": "Masters in Information Science (Machine Learning Specialization)",
+            "program": "Graduate Degree Seeking",      
+            "college": "The University of Arizona | Graduate",
+            # "college": "College of Information Science",
+            "degree": "MS",
+            "major": "Information Science",
+            "emphasis": "Machine-Learning",
+      
+            # "year": "Batch of 2024 - 2026",
+            "graduation term": "Spring 2026",
+            # "status": "Graduated with Masters",
+            "status": "Degree has been awarded",
+            "email": "sundarram1997@gmail.com",
+            # "linkedin": "https://www.linkedin.com/in/sundar-ram-subramanian",
+            # "github": "https://github.com/your-handle",
+        }
+
 
 st.markdown(
             f"""
@@ -435,16 +469,19 @@ st.markdown(
             </div>
             <div class="info">
                 <h2 class="name">{PROFILE["name"]}</h2>
+                <h3 class="program">{PROFILE["program"]}</h3>
+                <h4 class="college">{PROFILE["college"]}</h4>
                 <div class="meta">
-                <div><b>{PROFILE["program"]}</b></div>
-                <div>{PROFILE["college"]}</div>  
-                <div>{PROFILE["year"]}</div>
+                <div><b>Degree:</b> {PROFILE["degree"]}</div>
+                <div><b>Major:</b> {PROFILE["major"]}</div>
+                <div><b>Emphasis:</b> {PROFILE["emphasis"]}</div>   
+                <div><b>Graduation Term:</b> {PROFILE["graduation term"]}</div>
                 <br>
                 <div><b>Status:</b> {PROFILE["status"]}</div>
                 </div>
                 <div class="links" style="margin-top:12px;">
                 <div>
-                <a href="https://drive.google.com/file/d/1D3clqQMUidSRerpDAXEg8-RV4edXqZTf/view?usp=share_link"
+                <a href="https://drive.google.com/file/d/1kd7SuPWV48KhwAXANAfEp5l-ykqri5zu/view?usp=share_link"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="external-link">
