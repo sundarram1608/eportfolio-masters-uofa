@@ -506,7 +506,7 @@ st.write("")  # spacer
 # -----------------------------
 # Courses section with expanders
 # -----------------------------
-st.markdown("#### Courses Completed")
+st.markdown("#### Course Details")
 
 for course in COURSES:
     with st.expander(course["course_name"], expanded=True):
