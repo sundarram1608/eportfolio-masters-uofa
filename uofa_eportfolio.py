@@ -469,7 +469,7 @@ st.markdown(
             </div>
             <div class="info">
                 <h2 class="name">{PROFILE["name"]}</h2>
-                <h3 class="college">{PROFILE["college"]}</h3>
+                <h4 class="college">{PROFILE["college"]}</h4>
                 <div class="meta">
                 <div><b>Program:</b> {PROFILE["program"]}</div>
                 <div><b>Degree:</b> {PROFILE["degree"]}</div>
