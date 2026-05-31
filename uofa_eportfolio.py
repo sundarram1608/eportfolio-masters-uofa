@@ -425,9 +425,9 @@ profile_uri = img_uri("profile_picture.jpeg")
 cover_html = f'<img src="{cover_uri}" />' if cover_uri else ""
 avatar_html = f'<img class="avatar" src="{profile_uri}" />' if profile_uri else ""
 
-# transcript_uri = img_uri("Unofficial_Transcript_Sundar Ram Subramanian.pdf")
+# transcript_uri = img_uri("Official_Transcript_Sundar Ram Subramanian(TRI7461E).pdf")
 st.markdown(
-    '<a href="https://drive.google.com/file/d/1kd7SuPWV48KhwAXANAfEp5l-ykqri5zu/view?usp=share_link" '
+    '<a href="https://drive.google.com/file/d/1BcchtCMuraHFcPvno0oy13Gz7-tWjgZ2/view?usp=share_link" '
     'target="_blank" '
     'rel="noopener noreferrer">Open file</a>',
     unsafe_allow_html=True
@@ -481,7 +481,7 @@ st.markdown(
                 </div>
                 <div class="links" style="margin-top:12px;">
                 <div>
-                <a href="https://drive.google.com/file/d/1kd7SuPWV48KhwAXANAfEp5l-ykqri5zu/view?usp=share_link"
+                <a href="https://drive.google.com/file/d/1BcchtCMuraHFcPvno0oy13Gz7-tWjgZ2/view?usp=share_link"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="external-link">
